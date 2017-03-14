@@ -10,18 +10,18 @@ module.exports = function(grunt){
 		sass:{
 			dist:{
 				files:{
-					'dev/css/style.css':'dev/assets/sass/*.scss'
+					'dev/assets/css/style.css':'dev/assets/sass/*.scss'
 				},
 				options:{
-					debugInfo: true,																									
-					sourcemap:true
+					debugInfo: false,																									
+					sourcemap:'auto'
 				}
 			}
 		},
 		watch:{
 			scripts:{
 				files:['dev/assets/sass/*.scss'],
-				tasks: ['sass']
+				tasks: ['sass','cssmin']
 			}
 		},
 		jshint:{
